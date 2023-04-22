@@ -1,13 +1,14 @@
+from werkzeug.utils import secure_filename
+from flask import Flask, flash, request, redirect, url_for
+import tensorflow_hub as hub
+from tensorflow.keras.utils import load_img, img_to_array
+import tensorflow as tf
 import os
 import numpy as np
 
 from keras.models import load_model
 import cv2
-import tensorflow as tf
-from tensorflow.keras.utils import load_img, img_to_array
-import tensorflow_hub as hub
-from flask import Flask, flash, request, redirect, url_for
-from werkzeug.utils import secure_filename
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 modelo = tf.keras.models.load_model(
