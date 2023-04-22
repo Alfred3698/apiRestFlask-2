@@ -1,7 +1,7 @@
 Flask
 Gunicorn
 numpy
-tensorflow==2.10.0
+tensorflow-cpu==2.10.0
 opencv-python
 tensorflow_hub
 pillow
