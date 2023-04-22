@@ -2,4 +2,4 @@ Flask
 Gunicorn
 numpy
 tensorflow==2.10.0
-cv2
+opencv-python
