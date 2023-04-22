@@ -21,7 +21,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route('/')
 def hello_world():
-    return 'Hola Alfredo'
+    return 'Hola Mundo'
 
 
 def allowed_file(filename):
