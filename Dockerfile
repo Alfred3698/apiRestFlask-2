@@ -9,4 +9,4 @@ RUN pip3 install -r requirements.txt
 COPY . .
 # Add this:
 
-#ENTRYPOINT ["gunicorn", "--config", "gunicorn_config.py", "app:app"]
+ENTRYPOINT ["gunicorn", "--config", "gunicorn_config.py", "app:app"]
