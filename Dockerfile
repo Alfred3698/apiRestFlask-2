@@ -8,5 +8,6 @@ RUN pip3 install -r requirements.txt
 
 COPY . .
 # Add this:
-
+ENV FLASK_APP=app.py
+EXPOSE 5000
 ENTRYPOINT ["gunicorn", "--config", "gunicorn_config.py", "app:app"]
