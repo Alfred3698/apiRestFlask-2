@@ -8,7 +8,4 @@ RUN pip3 install -r requirements.txt
 
 COPY . .
 # Add this:
-EXPOSE 5000
-
-ENTRYPOINT ["gunicorn", "--config", "gunicorn_config.py", "app:app"]
-EXPOSE 5000
+ENTRYPOINT ["gunicorn.sh"]
