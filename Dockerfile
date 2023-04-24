@@ -1,5 +1,5 @@
 #FROM python:3.8-slim-buster
-FROM python:alpine
+FROM python
 WORKDIR /python-docker
 
 COPY requirements.txt requirements.txt
