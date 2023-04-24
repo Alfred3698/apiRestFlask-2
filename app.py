@@ -45,10 +45,13 @@ def upload_file():
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             try:
+                print("iniciando creación de folder")
                 os.stat(UPLOAD_FOLDER)
             except:
                 os.mkdir(UPLOAD_FOLDER)
+            print("iniciando guardado de archivo")
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            print("iniciando prediccion")
             prediccion = categorizar(UPLOAD_FOLDER+'/'+filename)
             os.remove(UPLOAD_FOLDER+'/'+filename)
             return prediccion_(prediccion)
